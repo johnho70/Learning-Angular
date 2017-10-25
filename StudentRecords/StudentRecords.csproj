@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\app\core\data-filter.service.ts" />
+    <Content Remove="wwwroot\app\core\trackby.service.ts" />
+    <Content Remove="wwwroot\app\shared\property-resolver.ts" />
+    <Content Remove="wwwroot\app\shared\shared.module.ts" />
+    <Content Remove="wwwroot\app\students\students-edit.component.ts" />
+    <Content Remove="wwwroot\app\students\students-grid.component.ts" />
+    <Content Remove="wwwroot\app\students\students.component.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="1.0.0" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0" />
+    <DotNetCliToolReference Include="Microsoft.Extensions.SecretManager.Tools" Version="2.0.0" />
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
+    <DotNetCliToolReference Include="Microsoft.DotNet.Watcher.Tools" Version="2.0.0" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <TypeScriptCompile Include="wwwroot\app\core\data-filter.service.ts" />
+    <TypeScriptCompile Include="wwwroot\app\core\sorter.ts" />
+    <TypeScriptCompile Include="wwwroot\app\core\trackby.service.ts" />
+    <TypeScriptCompile Include="wwwroot\app\shared\interfaces.ts" />
+    <TypeScriptCompile Include="wwwroot\app\shared\property-resolver.ts" />
+    <TypeScriptCompile Include="wwwroot\app\shared\shared.module.ts" />
+    <TypeScriptCompile Include="wwwroot\app\students\students-edit.component.ts" />
+    <TypeScriptCompile Include="wwwroot\app\students\students-grid.component.ts" />
+    <TypeScriptCompile Include="wwwroot\app\students\students.component.ts" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Folder Include="wwwroot\app\core\services\" />
+  </ItemGroup>
+
+</Project>
