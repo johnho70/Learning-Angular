@@ -4,7 +4,6 @@ import { Router } from '@angular/router';
 import { DataFilterService} from '../core/data-filter.service';
 import { DataService} from '../core/data.service';
 import { IStudent, IPagedResults } from '../shared/interfaces';
-import { PaginationComponent } from '../shared/pagination/pagination.component';
 
 @Component({
     selector: 'students',
@@ -19,8 +18,7 @@ export class StudentsComponent implements OnInit {
     totalRecords: number = 0;
     pageSize: number = 10;
     constructor(private router: Router,
-        private dataservice: DataService,
-        private dataFilter: DataFilterService) { }
+        private dataservice: DataService) { }
     ngOnInit() {
         this.title = "Students Record";
         //this.getStudents();
@@ -30,7 +28,7 @@ export class StudentsComponent implements OnInit {
     filterChanged(filterText: string) {
         if (filterText && this.students) {
             let props = ['firstName', 'lastName'];
-            this.filteredStudents = this.dataFilter.filter(this.students, props, filterText);
+            //this.filteredStudents = this.dataFilter.filter(this.students, props, filterText);
         }
         else {
             this.filteredStudents = this.students;

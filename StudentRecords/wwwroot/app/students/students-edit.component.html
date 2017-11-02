@@ -21,13 +21,7 @@
                 <label>Email</label>
                 <input name="email" type="email" class="form-control" [(ngModel)]="student.email" #email="ngModel" required pattern="^[^\s@]+@[^\s@]+\.[^\s@]{2,}$" />
             </div>
-            <!--<div class="form-group">
-                <label>Gen</label>
-                <input type="checkbox" name="maleGender" [(ngModel)]="student.gender">
-                <label for="gender">Male</label>
-                <input type="checkbox" name="femaleGender" [(ngModel)]="student.gender">
-                <label for="gender">Female</label>
-            </div>-->
+          
             <div class="form-group">
                 <label>Gender</label><br />
                 <div class="radio">
@@ -43,8 +37,25 @@
                 </div>       
             </div>
             <div class="form-group">
+                <input list="browsers">
+
+                <datalist id="browsers">
+                    <option value="Internet Explorer">
+                    <option value="Firefox">
+                    <option value="Chrome">
+                    <option value="Opera">
+                    <option value="Safari">
+                </datalist>
+                <select name="selectlLanguage" runat="server">
+                    <option value="English (USA)">English (USA)</option>
+                    <option value="Portugese (Brazil)">Portugese (Brazil)</option>
+                    <option value="French (Canada)">French (Canada)</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
                 <label>GPA</label>
-                <input type="number" name="gpa" [(ngModel)]="student.gpa" #gpa="ngModel" class="form-control" >
+                <input type="number" name="gpa" [(ngModel)]="student.gpa" #gpa="ngModel" class="form-control" min="0" max="4" >
             </div>
         <div *ngIf="student">
             <div class="alert alert-warning" *ngIf="student.id && deleteMessageEnabled">
