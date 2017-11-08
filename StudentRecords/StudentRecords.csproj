@@ -9,6 +9,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Apis\MessagesController.cs" />
+    <Compile Remove="Models\Message.cs" />
+    <Compile Remove="Models\Order.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Remove="wwwroot\app\core\data-filter.service.ts" />
     <Content Remove="wwwroot\app\core\trackby.service.ts" />
     <Content Remove="wwwroot\app\shared\property-resolver.ts" />

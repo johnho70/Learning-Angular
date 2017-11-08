@@ -72,9 +72,8 @@ namespace StudentRecords
                     Version = "v1",
                     Title = "ASP.NET Core students API",
                     Description = "ASP.NET Core/Angular Swagger Documentation",
-                    TermsOfService = "None",
-                    Contact = new Contact { Name = "Dan Wahlin", Url = "http://twitter.com/danwahlin" },
-                    License = new License { Name = "MIT", Url = "https://en.wikipedia.org/wiki/MIT_License" }
+                    TermsOfService = "None"
+                    
                 });
 
                 //Add XML comment document by uncommenting the following
